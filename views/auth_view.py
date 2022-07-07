@@ -21,4 +21,4 @@ class AuthViewLogin(Resource):
 
     def put(self):
         data = request.get_json()
-        return auth_service.update(data), 204
+        return auth_service.update_token(data), 204

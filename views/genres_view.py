@@ -16,8 +16,8 @@ class GenresView(Resource):
         page = request.args.get("page")
         genres = genre_service.get_all_genres()
         if page is not None:
-            genres = genre_service.paginate(genres, int(page), per_page=5)
-        return genres_schema.dump(genres.items), 200
+            genres = genre_service.paginate(genres, int(page), per_page=5).items
+        return genres_schema.dump(genres), 200
 
 
 @genre_ns.route('/<int:gid>')

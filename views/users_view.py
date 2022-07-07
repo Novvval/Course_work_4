@@ -12,8 +12,8 @@ user_ns = Namespace("users")
 class UserView(Resource):
     @auth_required
     def get(self):
-        data = request.get_json()
-        user = user_service.get_by_email(data)
+        data = request.headers["Authorization"]
+        user = user_service.get_by_token(data)
         return user_schema.dump(user), 200
 
     @auth_required

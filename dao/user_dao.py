@@ -9,7 +9,7 @@ class UserDAO:
         return self.session.query(User).all()
 
     def get_by_email(self, email):
-        return self.session.query(User).filter(User.email == email).first()
+        return self.session.query(User).filter(User.email == email)
 
     def get_by_id(self, uid):
         return self.session.query(User).get(uid)

@@ -14,8 +14,8 @@ class DirectorsView(Resource):
         page = request.args.get("page")
         directors = director_service.get_all_directors()
         if page is not None:
-            directors = director_service.paginate(directors, int(page), per_page=5)
-        return directors_schema.dump(directors.items), 200
+            directors = director_service.paginate(directors, int(page), per_page=5).items
+        return directors_schema.dump(directors), 200
 
 
 @director_ns.route('/<int:did>')

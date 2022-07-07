@@ -19,9 +19,9 @@ class GenresView(Resource):
         if status == "new":
             movies = movie_service.get_new_movies()
         if page is not None:
-            movies = movie_service.paginate(movies, int(page), per_page=5)
+            movies = movie_service.paginate(movies, int(page), per_page=5).items
 
-        return movies_schema.dump(movies.items), 200
+        return movies_schema.dump(movies), 200
 
     @admin_required
     def post(self):
