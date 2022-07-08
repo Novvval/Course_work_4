@@ -30,10 +30,6 @@ def create_app(config) -> Flask:
     app.config.from_object(config)
     app.app_context().push()
     register_extensions(app)
-
-    @app.route('/')
-    def index():
-        return render_template("index.html")
     return app
 
 
