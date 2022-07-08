@@ -40,24 +40,6 @@ def register_extensions(app):
     api.add_namespace(director_ns)
     api.add_namespace(auth_ns)
     api.add_namespace(user_ns)
-#     create_data(db)
-#
-#
-# def create_data(db):
-#     db.create_all()
-#     for movie in movies:
-#         movie["id"] = movie.pop('pk')
-#         movie = Movie(**movie)
-#         db.session.add(movie)
-#     for genre in genres:
-#         genre["id"] = genre.pop('pk')
-#         genre = Genre(**genre)
-#         db.session.add(genre)
-#     for director in directors:
-#         director["id"] = director.pop('pk')
-#         director = Director(**director)
-#         db.session.add(director)
-#     db.session.commit()
 
 
 config = Config()
