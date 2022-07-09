@@ -1,11 +1,9 @@
-import hashlib
-
 import jwt
 from flask_restx import abort
 
-from constants import PWD_HASH_SALT, PWD_HASH_ITERATIONS, SECRET, ALGORITHM
+from constants import SECRET, ALGORITHM
 from dao.user_dao import UserDAO
-from tools import get_hash
+from utils.tools import get_hash
 
 
 class UserService:

@@ -1,7 +1,4 @@
 from dao.auth_dao import AuthDAO
-from dao.model.director_model import DirectorSchema
-from dao.model.genre_model import GenreSchema
-from dao.model.movie_model import MovieSchema
 from dao.movie_dao import MovieDAO
 from dao.director_dao import DirectorDAO
 from dao.genre_dao import GenreDAO

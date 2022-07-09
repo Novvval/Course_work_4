@@ -2,7 +2,7 @@ from constants import SECRET, ALGORITHM
 import jwt
 from flask_restx import abort
 from dao.auth_dao import AuthDAO
-from tools import generate_tokens, get_hash
+from utils.tools import generate_tokens, get_hash
 
 
 class AuthService:
