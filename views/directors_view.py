@@ -19,6 +19,7 @@ class DirectorsView(Resource):
 
 
 @director_ns.route('/<int:did>')
+@director_ns.doc(params={'did': 'Director id'})
 class DirectorView(Resource):
     @auth_required
     def get(self, did):

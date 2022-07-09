@@ -22,7 +22,9 @@ class GenresView(Resource):
 
         return movies_schema.dump(movies), 200
 
+
 @movie_ns.route('/<int:mid>')
+@movie_ns.doc(params={'mid': 'Movie id'})
 class GenreView(Resource):
     @auth_required
     def get(self, mid):

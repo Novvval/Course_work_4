@@ -21,6 +21,7 @@ class GenresView(Resource):
 
 
 @genre_ns.route('/<int:gid>')
+@genre_ns.doc(params={'gid': 'Genre id'})
 class GenreView(Resource):
     @auth_required
     def get(self, gid):
